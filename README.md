@@ -25,3 +25,11 @@ echo "include $(pwd)/nginx.conf" > /etc/nginx/nginx.conf
 ```sh
 sed "s|#Sites|include $(pwd)/nginx/sites/\*\.conf|g" nginx.conf
 ```
+7. Test configuration
+```sh
+nginx -t
+```
+8. Reload nginx
+```sh
+nginx -s reload
+```
