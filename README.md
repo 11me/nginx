@@ -23,7 +23,7 @@ echo "include $(pwd)/nginx.conf" > /etc/nginx/nginx.conf
 ```
 6. In the current nginx.conf replace the `include` to you directory
 ```sh
-sed "s|#Sites|include $(pwd)/nginx/sites/\*\.conf|g" nginx.conf
+sed -i "s|#Sites|include $(pwd)/nginx/sites/\*\.conf;|g" nginx.conf
 ```
 7. Test configuration
 ```sh
